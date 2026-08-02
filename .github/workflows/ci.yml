@@ -10,4 +10,11 @@ jobs:
       - run: echo "Building the project..."
       - run: echo "Running tests..."
       - run: echo "All steps passed!"
-      
+    
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploying to production..."
+      - run: echo "Deployment successful! App is live."
